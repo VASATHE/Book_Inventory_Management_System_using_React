@@ -23,11 +23,11 @@ public class BookService {
     public Book saveBook(Book book){
         return repository.save(book);
     }
-    // public Book updateBook(int id,Book book){
-        // book.setId(id);
-        // return repository.save(book);
-    // }
-    // public void deleteBook(int id){
-        // repository.deleteById(id);
-    // }
+    public Book updateBook(int id,Book book){
+        book.setId(id);
+        return repository.save(book);
+    }
+    public void deleteBook(int id){
+        repository.deleteById(id);
+    }
 }
