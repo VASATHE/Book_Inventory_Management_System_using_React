@@ -22,12 +22,18 @@ export default function AddBook(){
         };
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="container">
             <h2>Add Book</h2>
-            <input name="title" placeholder="Title" onChange={handleChange}></input>
-            <input name="author" placeholder="Author" onChange={handleChange}></input>
-            <input name="description" placeholder="Description" onChange={handleChange}></input>
-            <button type="submit">Save</button>
+            <div className="form-group">
+            <input name="title" placeholder="Title" onChange={handleChange} required></input>
+            </div>
+            <div className="form-group">
+            <input name="author" placeholder="Author" onChange={handleChange} required></input>
+            </div>
+            <div className="form-group">
+            <input name="description" placeholder="Description" onChange={handleChange} required></input>
+            </div>
+            <button type="submit" className="btn-success">Save</button>
         </form>
     );
 }

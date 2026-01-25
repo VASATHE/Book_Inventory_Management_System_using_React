@@ -39,9 +39,9 @@ export default function BookList() {
             <td>{book.author}</td>
             <td>{book.description}</td>
             <td>
-              <button><Link to={`/update/${book.id}`}>Update</Link></button>
-              {" | "}
-              <button onClick={() => handleDelete(book.id)}>Delete</button>
+              <Link to={`/update/${book.id}`}><button className="btn-warning">Update</button></Link>
+              <br></br><br></br>
+              <button onClick={() => handleDelete(book.id)} className="btn-danger">Delete</button>
             </td>
           </tr>
         ))}

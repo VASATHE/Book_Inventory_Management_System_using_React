@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AddBook from "./components/AddBook";
 import UpdateBook from "./components/UpdateBook";
+import "./App.css";
+import "./components/Navbar.css"
 
 import { Routes, Route } from "react-router-dom";
 

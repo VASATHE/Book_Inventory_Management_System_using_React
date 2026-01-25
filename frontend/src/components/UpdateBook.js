@@ -41,9 +41,9 @@ export default function UpdateBook() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="container">
       <h2>Update Book</h2>
-
+      <div className="form-group">
       <input
         name="title"
         value={book.title}
@@ -51,7 +51,8 @@ export default function UpdateBook() {
         placeholder="Title"
         required
       />
-
+      </div>
+      <div className="form-group">
       <input
         name="author"
         value={book.author}
@@ -59,15 +60,17 @@ export default function UpdateBook() {
         placeholder="Author"
         required
       />
-
+      </div>
+      <div className="form-group">
       <input
         name="description"
         value={book.description}
         onChange={handleChange}
         placeholder="Description"
       />
+      </div>
 
-      <button type="submit">Update</button>
+      <button type="submit" className="btn-success">Update</button>
     </form>
   );
 }
