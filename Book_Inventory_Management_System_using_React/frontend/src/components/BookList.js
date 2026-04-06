@@ -6,7 +6,6 @@ export default function BookList() {
 
   const [books, setBooks] = useState([]);
 
-  // ✅ FIX: define role INSIDE component
   const role = localStorage.getItem("role");
 
   useEffect(() => {
