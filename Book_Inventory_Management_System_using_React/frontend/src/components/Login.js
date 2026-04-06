@@ -20,8 +20,7 @@ export default function Login() {
 
     try {
       await login(user.username, user.password);
-
-      // ✅ Store role
+      
       if (user.username === "admin") {
         localStorage.setItem("role", "ADMIN");
       } else {
