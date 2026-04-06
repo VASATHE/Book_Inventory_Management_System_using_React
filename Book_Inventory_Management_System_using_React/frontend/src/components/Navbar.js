@@ -4,12 +4,14 @@ import { logout } from "../api/authService";
 
 export default function Navbar() {
 
-  const navigate = useNavigate();   // ✅ MUST be inside component
+  const navigate = useNavigate(); 
   const role = localStorage.getItem("role");
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   const handleLogout = async () => {
     await logout();
+    localStorage.clear();
     navigate("/login");
   };
 
@@ -21,7 +23,6 @@ export default function Navbar() {
 
       <div className="navbar-links">
 
-        {/* ✅ Show only if logged in */}
         {isLoggedIn && (
           <>
             <Link to="/">Home</Link>
@@ -34,8 +35,7 @@ export default function Navbar() {
             <button onClick={handleLogout}>Logout</button>
           </>
         )}
-
-        {/* ✅ Show Login if not logged in */}
+         
         {!isLoggedIn && <Link to="/login">Login</Link>}
 
       </div>
