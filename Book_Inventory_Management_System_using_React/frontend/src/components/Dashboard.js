@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDashboard } from "../api/bookService";
 
 export default function Dashboard() {
-
+  
   const [stats, setStats] = useState({
     total: 0,
     lowStock: 0,
