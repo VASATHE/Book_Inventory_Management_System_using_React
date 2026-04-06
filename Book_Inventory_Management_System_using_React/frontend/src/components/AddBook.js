@@ -51,12 +51,7 @@ export default function AddBook(){
             </div>
 
             <div className="form-group">
-                <input 
-                  name="quantity" 
-                  type="number" 
-                  placeholder="Quantity" 
-                  onChange={handleChange} 
-                  required 
+                <input name="quantity" type="number" placeholder="Quantity" onChange={handleChange} required
                 />
             </div>
 
