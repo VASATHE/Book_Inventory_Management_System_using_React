@@ -30,7 +30,7 @@ export default function Login() {
 
       localStorage.setItem("isLoggedIn", "true");
 
-      navigate("/");
+      window.location.href = "/";
 
     } catch (error) {
       alert("Invalid credentials");
