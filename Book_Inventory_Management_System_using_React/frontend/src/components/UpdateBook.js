@@ -15,7 +15,7 @@ export default function UpdateBook() {
 
   useEffect(() => {
     loadBook();
-  }, []);
+  }, [id]);
 
   const loadBook = async () => {
     try {
